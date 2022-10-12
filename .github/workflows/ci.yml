@@ -1,0 +1,14 @@
+name: CI
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the project
+        uses: actions/checkout@v2
+      - name: Install modules
+        working-directory: ./api
+        run: npm install
+      - name: Run tests
+        working-directory: ./api
+        run: npm run test
