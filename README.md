@@ -8,6 +8,8 @@ The project will be broken down into three areas:
 2. the mobile application, and
 3. the marketing website
 
+Development will use the [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow model.
+
 ## 🛣️ Roadmap
 
 ### v0.1.0
