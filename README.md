@@ -12,6 +12,8 @@ The project will be broken down into three areas:
 
 ### v0.1.0
 
+- [ ] Setup basic TypeScript-based Jest tests.
+- [ ] Add Github Actions pipeline to run Jest tests.
 - [ ] Create a ERD for the database structure.
 - [ ] Install and setup Prisma with PlanetScale, create the initial migration.
 - [ ] Write Jest tests for the CRUD API routes to store round information.
