@@ -1,0 +1,47 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "postgresql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "foreignKeys"
+}
+
+enum GameType {
+  ABA
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String   @db.VarChar(255)
+}
+
+model Game {
+  id     String   @id @default(uuid())
+  type   GameType @default(ABA)
+  club   Club     @relation(fields: [clubId], references: [id])
+  clubId String
+  Rounds Round[]
+}
+
+model Club {
+  id            String  @id @default(uuid())
+  name          String
+  streetAddress String?
+  city          String
+  logoUrl       String?
+  url           String?
+  Games         Game[]
+}
+
+model Round {
+  id          String @id @default(uuid())
+  game        Game   @relation(fields: [gameId], references: [id])
+  roundNumber Int
+  score       Int
+  gameId      String
+}
