@@ -12,9 +12,39 @@ provider:
   runtime: nodejs14.x
 
 functions:
-  hello:
-    handler: src/handler.hello
+  getAllArchers:
+    handler: src/archers.getAll
     events:
       - httpApi:
-          path: /
-          method: get
+          path: /api/archers
+          method: GET
+  createArcher:
+    handler: src/archers.create
+    events:
+      - httpApi:
+          path: /api/archers
+          method: POST
+  getArcher:
+    handler: src/archers.get
+    events:
+      - httpApi:
+          path: /api/archers/{archerId}
+          method: GET
+  deleteArcher:
+    handler: src/archers.delete
+    events:
+      - httpApi:
+          path: /api/archers/{archerId}
+          method: DELETE
+  getArcherGame:
+    handler: src/archers.getArcherGame
+    events:
+      - httpApi:
+          path: /api/archers/{archerId}/games/{gameId}
+          method: GET
+  deleteArcherGame:
+    handler: src/archers.deleteArcherGame
+    events:
+      - httpApi:
+          path: /api/archers/{archerId}/games/{gameId}
+          method: DELETE
