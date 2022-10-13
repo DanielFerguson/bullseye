@@ -16,9 +16,11 @@ Development will use the [git-flow](https://www.atlassian.com/git/tutorials/comp
 
 - [x] Setup basic TypeScript-based Jest tests.
 - [x] Add Github Actions pipeline to run Jest tests.
-- [ ] Create a ERD for the database structure.
+- [x] Create a ERD for the database structure.
+- [x] Scaffold Jest tests for the CRUD API routes.
 - [ ] Install and setup Prisma with PlanetScale, create the initial migration.
-- [ ] Write Jest tests for the CRUD API routes to store round information.
+- [ ] Setup database model seeders for testing.
+- [ ] Write Jest tests for the CRUD API routes.
 - [ ] Write the CRUD API route functions to satisfy the written tests.
 - [ ] ...
 
@@ -28,8 +30,8 @@ Development will use the [git-flow](https://www.atlassian.com/git/tutorials/comp
 
 ## Project Artifacts
 
-- [Figma Design](#)
-- [Database ERD](#)
+- [Mobile Application Design](#)
+- [Database ERD](https://app.excalidraw.com/l/9XvhBFLCrQk/85yT36dOqmT)
 
 ## Technology Decisions
 
