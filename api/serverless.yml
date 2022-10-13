@@ -13,37 +13,37 @@ provider:
 
 functions:
   getAllArchers:
-    handler: src/archers.getAll
+    handler: src/api/archers.getAll
     events:
       - httpApi:
           path: /api/archers
           method: GET
   createArcher:
-    handler: src/archers.create
+    handler: src/api/archers.create
     events:
       - httpApi:
           path: /api/archers
           method: POST
   getArcher:
-    handler: src/archers.get
+    handler: src/api/archers.get
     events:
       - httpApi:
           path: /api/archers/{archerId}
           method: GET
   deleteArcher:
-    handler: src/archers.delete
+    handler: src/api/archers.delete
     events:
       - httpApi:
           path: /api/archers/{archerId}
           method: DELETE
   getArcherGame:
-    handler: src/archers.getArcherGame
+    handler: src/api/archers.getArcherGame
     events:
       - httpApi:
           path: /api/archers/{archerId}/games/{gameId}
           method: GET
   deleteArcherGame:
-    handler: src/archers.deleteArcherGame
+    handler: src/api/archers.deleteArcherGame
     events:
       - httpApi:
           path: /api/archers/{archerId}/games/{gameId}
